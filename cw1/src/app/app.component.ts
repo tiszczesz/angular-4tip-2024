@@ -10,4 +10,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'cw1';
+  message = 'Hello World';
+  firstName = 'John';
+  lastName = 'Doe';
+  year = new Date().getFullYear();
 }

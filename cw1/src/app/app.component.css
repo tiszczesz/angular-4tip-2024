@@ -1,0 +1,16 @@
+div{
+    border-bottom: 1px solid #ccc;
+}
+article{
+    text-align: center;
+    color: green;
+    padding: 20px;
+}
+.info{
+    color: blue;
+    margin: auto;
+    border: solid 1px yellowgreen;
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+}
