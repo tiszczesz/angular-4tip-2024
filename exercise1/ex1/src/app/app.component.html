@@ -1,0 +1,8 @@
+<main class="container">
+  <h1>Czy działa bootstrap</h1>
+  <div>{{message}}</div>
+  <div [style.color]="color" [innerText]="message"></div>
+  <button (click)="handleClick()">Przycisk</button>
+</main>
+
+<router-outlet />
