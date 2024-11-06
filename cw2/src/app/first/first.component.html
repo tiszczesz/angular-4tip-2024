@@ -1,0 +1,6 @@
+<h3>Komponent pierwszy</h3>
+<label>Podaj tekst</label>
+<input type="text" placeholder="tu będą zmiany" [value]="info()" 
+(input)="handleInput($event)">
+<div>{{info()}}</div>
+<div [innerText]="info()"></div>
