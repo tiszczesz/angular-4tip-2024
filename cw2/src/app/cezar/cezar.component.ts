@@ -1,4 +1,4 @@
-import { Component, computed, Signal, signal } from '@angular/core';
+import { Component, computed,  signal } from '@angular/core';
 
 @Component({
   selector: 'app-cezar',
@@ -9,13 +9,13 @@ import { Component, computed, Signal, signal } from '@angular/core';
 })
 export class CezarComponent {
   handleInputKey($event: Event) {
-    this.key = signal(parseInt((<HTMLInputElement>$event.target).value));
+    this.key.set(parseInt((<HTMLInputElement>$event.target).value));
   }
   handleInput($event: Event) {
-    this.text = signal((<HTMLInputElement>$event.target).value);
+    this.text.set((<HTMLInputElement>$event.target).value);
   }
-  text = signal('');
-  key = signal(2);
+  text = signal<string>('');
+  key = signal<number>(2);
   cezarcompute(text: string, key: number) {
     return text.split('').map((c) => {
       if (c >= 'a' && c <= 'z') {

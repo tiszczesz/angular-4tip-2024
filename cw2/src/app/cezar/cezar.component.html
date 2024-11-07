@@ -1,5 +1,5 @@
 <textarea [value]="text()" (input)="handleInput($event)" ></textarea>
 <input type="range" min="0" max="26" [value]="key()" (input)="handleInputKey($event)">
 <div>{{key()}}</div>
-<div>{{cezarcompute(text(), key())}}</div>
+<div>{{resultText()}}</div>
 <!-- kodowanie Cezara przy zmianie w textarea pojawia się zakodowany tekst w div -->
