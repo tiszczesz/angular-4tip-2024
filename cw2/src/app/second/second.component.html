@@ -1,0 +1,5 @@
+<label for="text">Bez signals</label>
+<textarea #text (input)="handleInput($event)" [value]="message"></textarea>
+<div style="border: solid 1px black; padding: 10px;">
+    {{message}}
+</div>
