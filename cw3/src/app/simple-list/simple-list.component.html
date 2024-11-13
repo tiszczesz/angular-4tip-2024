@@ -1,0 +1,12 @@
+<div>
+ <h3>Lista do zrobienia</h3>
+ <input type="text" placeholder="dodaj nowe zadanie" #inputTodo>
+ <input type="button" value="Dodaj" (click)="handleClick(inputTodo)"/>
+  <ol>
+    @for (item of todos(); track $index) {
+        <!-- <li>{{ item }}</li> -->
+        <li [innerText]="item"></li>
+    }
+  </ol>
+</div>
+
