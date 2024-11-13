@@ -4,8 +4,8 @@
  <input type="button" value="Dodaj" (click)="handleClick(inputTodo)"/>
   <ol>
     @for (item of todos(); track $index) {
-        <!-- <li>{{ item }}</li> -->
-        <li [innerText]="item"></li>
+        <li [id]="$index">{{ item }}</li>
+        <!-- <li [innerText]="item"></li> -->
     }
   </ol>
 </div>
