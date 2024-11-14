@@ -1,1 +1,38 @@
 <h3>Lista dostępnych kursów w tabelce</h3>
+<div>
+    <input type="text" placeholder="nazwa kursu" #courseName> 
+    <input type="date" placeholder="data" #couseDate>
+    <select #courseCity >
+       @for (city of cities; track $index) {
+            <option [value]="city">{{ city }}</option>
+       }
+    </select>
+    
+    <input type="button" value="Dodaj" (click)="addCourse(courseName, couseDate, courseCity)"/>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Lp</th>
+            <th>Nazwa kursu</th>
+            <th>Data</th>
+            <th>Miejsce</th>
+            <th> ----- </th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        @for (course of myCourses(); track $index) {
+            <tr>
+                <td>{{ $index + 1 }}</td>
+                <td>{{ course.name }}</td>
+                <td>{{ course.date.toLocaleDateString() }}</td>
+                <td>{{ course.city }}</td>
+                <td>
+                    
+                    <img (click)="removeCourse($index)" src="icons/delete.png" alt="delete">
+               </td>
+            </tr>
+        }
+    </tbody>
+</table>
