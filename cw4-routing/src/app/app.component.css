@@ -1,0 +1,27 @@
+nav{
+    background-color: #b5b1b1;
+    color: white;
+  
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+.active{
+    background-color: rgb(135, 149, 149);
+}

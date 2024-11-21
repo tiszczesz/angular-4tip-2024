@@ -1,0 +1,14 @@
+<main class="container">
+    <h3>Lista pracowników</h3>
+    @for (worker of workers(); track $index) {
+        <div class="card m-2">
+            <div class="card-header">
+                <h4>{{ worker.name }}</h4>
+            </div>
+            <div class="card-body">
+                <img style="float: left;margin-right: 10px;" [src]="worker.image" alt="obrazek">
+                <p>{{ worker.bio }}</p>               
+            </div>
+        </div>
+    }
+</main>
