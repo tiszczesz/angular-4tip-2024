@@ -1,1 +1,7 @@
-<p>home works!</p>
+<div>
+    <input type="text" #info placeholder="podaj imię">
+    <input type="button" value="zapisz" (click)="Save(info)">
+</div>
+@for (item of names(); track $index) {
+    <div>{{item}}</div>
+}
