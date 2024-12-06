@@ -1,7 +1,13 @@
 <h2>Lista użytkowników</h2>
 <section class="users">
     <aside>
-        asdsada
+        <ul>
+            @for (u of usersList(); track $index) {
+                <li>
+                    <app-user/>
+                </li>
+            }
+        </ul>
     </aside>
     <article>
         sadsad
