@@ -1,0 +1,12 @@
+section.users{
+    display: flex;
+}
+aside{
+    width: 30%;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+article{
+    width: 70%;
+    padding: 10px;
+}

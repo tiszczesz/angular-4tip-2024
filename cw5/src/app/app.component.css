@@ -1,0 +1,24 @@
+nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+nav {
+    background-color: #787676;
+    color: white;
+    padding: 10px;
+    border-bottom: black 2px solid;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+main{
+    margin: 30px;
+}
+footer{
+    background-color: #787676;
+    color: white;
+    padding: 5px;
+    border-top: black 2px solid;
+}
