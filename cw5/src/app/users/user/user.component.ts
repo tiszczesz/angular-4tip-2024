@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { User } from '../../models/data_users';
 
 @Component({
   selector: 'app-user',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
+  user = input.required<User>();
 
+  get imagePath() {
+    return '/users/'+this.user().avatar;
+  }
 }

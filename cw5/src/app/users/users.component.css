@@ -2,11 +2,19 @@ section.users{
     display: flex;
 }
 aside{
-    width: 30%;
+    width: 70%;
     background-color: #f4f4f4;
     padding: 10px;
 }
 article{
     width: 70%;
     padding: 10px;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+li{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
 }
