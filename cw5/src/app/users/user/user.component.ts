@@ -13,7 +13,7 @@ selectedUserClick() {
 }
 
   user = input.required<User>(); //pobierna dane z rodzica
-  selectedUser = output<User>();
+  selectedUser = output<User>(); //wysyła dane do rodzica selectedUser
 
   get imagePath() {
     return '/users/'+this.user().avatar;
