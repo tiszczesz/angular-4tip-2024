@@ -9,9 +9,12 @@ import { User, users } from '../models/data_users';
   styleUrl: './users.component.css'
 })
 export class UsersComponent {
-onUserSelect($event: User) {
-    console.log('User selected:', $event);    
-}
+  selectedUser = signal<User | undefined>(undefined);
+
+  onUserSelect(user: User) {
+    console.log('User selected:', user);
+    this.selectedUser.set(user);
+  }
 
   usersList = signal<User[]>(users);
 }

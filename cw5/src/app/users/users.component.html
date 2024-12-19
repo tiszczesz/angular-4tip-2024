@@ -10,6 +10,11 @@
         </ul>
     </aside>
     <article>
-        sadsad
+        @if(selectedUser()){            
+            <h3>Wybrano użytkownika: {{selectedUser()?.name}}</h3>
+            <p>adres email: {{selectedUser()?.email}}</p>
+        }@else{
+            <h3>Wybierz użytkownika</h3>
+        }
     </article>
 </section>
