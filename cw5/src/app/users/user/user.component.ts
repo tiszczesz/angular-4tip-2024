@@ -8,8 +8,12 @@ import { User } from '../../models/data_users';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
+selectedUserClick() {
+   this.selectedUser.emit(this.user());//wysyła dane do rodzica selectedUser
+}
 
-  user = input.required<User>(); 
+  user = input.required<User>(); //pobierna dane z rodzica
+  selectedUser = output<User>();
 
   get imagePath() {
     return '/users/'+this.user().avatar;

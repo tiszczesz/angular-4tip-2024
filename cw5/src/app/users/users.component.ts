@@ -9,6 +9,9 @@ import { User, users } from '../models/data_users';
   styleUrl: './users.component.css'
 })
 export class UsersComponent {
+onUserSelect($event: User) {
+    console.log('User selected:', $event);    
+}
 
   usersList = signal<User[]>(users);
 }
