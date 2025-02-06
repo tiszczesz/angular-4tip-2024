@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { images, Item } from '../data/images';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,18 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+SetCatagories(index: number) {
+  this.categories.update(categories => {
+    categories[index] = !categories[index];
+    return categories;
+  });
+  console.log(this.categories());
+  
+}
+download(item: Item) {
+  item.downloads++;
+}
   title = 'my-ark1';
+  items = signal<Item[]>(images);
+  categories = signal<boolean[]>([false, false, false]);
 }
