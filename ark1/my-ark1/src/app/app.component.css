@@ -3,3 +3,6 @@
     flex-wrap: wrap;
     gap: 10px;
 }
+.gallery img{
+    border-radius: 10px;
+}
