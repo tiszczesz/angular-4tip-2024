@@ -15,9 +15,7 @@
 </div>
 <section class="gallery">
   @for (item of items(); track $index) {
-  @if((item.category=== 1 && categories()[0]) ||
-      (item.category=== 2 && categories()[1]) ||
-      (item.category=== 3 && categories()[2]))  {
+  @if (categories()[item.category - 1]) {
   <div class="gallery-item">
     <img [src]="'assets/'+item.filename" [alt]="item.alt" />
     <div>Pobrań: {{item.downloads}}</div>
