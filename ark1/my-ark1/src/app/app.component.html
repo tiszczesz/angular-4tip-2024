@@ -3,27 +3,32 @@
   <span class="form-switch m-2">
     <input class="form-check-input" type="checkbox" id="flowers" (click)="SetCatagories(0)">
     <label class="form-check-label" for="flowers">Kwiaty</label>
-</span>
-<span class="form-switch m-2">
+  </span>
+  <span class="form-switch m-2">
     <input class="form-check-input" type="checkbox" id="animals" (click)="SetCatagories(1)">
     <label class="form-check-label" for="animals">Zwierzęta</label>
-</span>
-<span class="form-switch m-2">
+  </span>
+  <span class="form-switch m-2">
     <input class="form-check-input" type="checkbox" id="cars" (click)="SetCatagories(2)">
     <label class="form-check-label" for="cars">Samochody</label>
-</span>
+  </span>
 </div>
 <section class="gallery">
- @for (item of items(); track $index) {
+  @for (item of items(); track $index) {
+  @if((item.category=== 1 && categories()[0]) ||
+      (item.category=== 2 && categories()[1]) ||
+      (item.category=== 3 && categories()[2]))  {
   <div class="gallery-item">
     <img [src]="'assets/'+item.filename" [alt]="item.alt" />
     <div>Pobrań: {{item.downloads}}</div>
     <input class="btn btn-success" type="button" (click)="download(item)" value="Pobierz" />
   </div>
- }
+  }
+
+  }
 
 
 
 
 
-<router-outlet />
+  <router-outlet />
