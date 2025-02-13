@@ -1,0 +1,14 @@
+<h1>Użycie NgModel</h1>
+
+<div>
+  <label for="numInput">Number Input:</label>
+  <input type="number" id="numInput" [(ngModel)]="info" min="0" max="100">
+</div>
+
+<div>
+  <label for="rangeInput">Range Input:</label>
+  <input type="range" id="rangeInput" [(ngModel)]="info" min="0" max="100">
+</div>
+<div>
+  info: {{info}}
+</div>
