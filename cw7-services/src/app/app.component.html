@@ -1,3 +1,9 @@
 <section class="container">
   <h1>Komponent główny</h1>
+  <section class="post-list">
+    @for (postItem of posts(); track $index) {
+    <app-post [post]="postItem" />
+    }
+  </section>
+
 </section>

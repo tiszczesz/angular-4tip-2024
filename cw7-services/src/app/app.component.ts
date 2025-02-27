@@ -1,10 +1,11 @@
 import { Component, inject, signal } from '@angular/core';
 import { Post } from '../Models/postsType';
 import { PostsServiceService } from './posts-service.service';
+import { PostComponent } from './post/post.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [PostComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -15,13 +16,12 @@ export class AppComponent {
 
   async loadPostsToApp() {
     const posts = await this.postsService.loadPosts();
-    this.posts.set(posts);
+    this.posts.set(posts);    
   }
   /**
    *
    */
   constructor() {
-    this.loadPostsToApp().then((p)=>console.log(p));
-      
+    this.loadPostsToApp();//.then(()=>console.log('Posts loaded',this.posts()));      
   }
 }
