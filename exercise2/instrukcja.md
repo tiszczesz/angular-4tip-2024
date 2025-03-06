@@ -4,3 +4,4 @@
     b. w każdym wierszu przycisk do usuwania danego użytkownika (tylko do odświeżenia strony)
 2. podstrona z formularzem dodająca nowego użytkownika do zbioru danych
     a. użyć elementu select do wyboru roli użytkownika
+    b. napisac metodę zwracającą najwiekszy id z user + 1
