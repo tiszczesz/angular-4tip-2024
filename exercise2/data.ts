@@ -1,5 +1,5 @@
 export const roles = ["admin", "user", "guest", "editor", "moderator"];
-export type User {
+export type User = {
     id: number;
     name: string;
     role: string;
